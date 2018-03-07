@@ -1,0 +1,60 @@
+.page-container {
+  background: #E5E9F2;
+  min-height: 90vh;
+  padding: 3.6rem;
+}
+
+.login-container {
+  background: #FFF;
+  width: 60%;
+  margin: 0 auto 8rem auto;
+  padding: 2rem;
+}
+
+.credentials,
+.signup {
+  width: 60%;
+  margin: 0 auto;
+}
+
+hr {
+  width: 75%;
+}
+
+.credentials {
+  margin-top: 2rem;
+}
+
+.credentials button,
+.signup button {
+  width: 100%;
+  padding: .75rem 2rem;
+}
+
+.credentials button:hover,
+.signup button:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 500px) {
+  input {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .page-container {
+    padding: 0;
+  }
+
+  .login-container {
+    width: 100%;
+    margin-top: 2em;;
+    padding: 2rem .5rem;
+  }
+
+  .credentials,
+  .signup {
+    width: 100%;
+  }
+}

@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="#">myMediaStorage</a>
+    <div>
+        <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav" *ngIf="router.url !== '/login'">
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/home']" [routerLinkActive]="'is-active'">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/upload']" [routerLinkActive]="'is-active'">Upload</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/profile']" [routerLinkActive]="'is-active'">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/contactUs']" [routerLinkActive]="'is-active'">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/logout']" [routerLinkActive]="'is-active'">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,67 @@
+
+<div class="row header-row">
+    <div class="col-md-6 welcome-message">
+        <div class="message-text">
+            <h1>Welcome To myMediaStorage</h1>
+            <h2>The one stop for all your media!</h2>
+        </div>
+    </div>
+    <div class="col-md-6 search-container">
+        <form class="form-inline my-2 my-lg-0 search-field">
+            <input #searchedTopic class="form-control mr-sm-2" id="searchTopic" type="search" placeholder="Search" aria-label="Search" (keyup.enter)="SearchForVideos(searchedTopic.value)"
+            (blur)="SearchForVideos(searchedTopic.value); searchedTopic.value='' ">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="SearchForVideos(searchedTopic.value)">Search</button>
+        </form>
+    </div>
+</div>
+<hr>
+<div class="video-container">
+    <h2 class="searched-videos">{{searchedTitle}} Videos</h2>
+
+    <div class="card-deck">
+
+        <div class="card" *ngFor="let video of videosList; let i = index">
+
+            <!-- Button trigger modal -->
+            <div id="modalBtn" data-toggle="modal" data-target="#myModal" [attr.data-id]="video" (click)="SelectVideo(video)">
+                <img class="card-img-top" [src]="video.imageUrl | youtube" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{video.title}}</h5>
+                    <p class="card-text">{{video.description}}</p>
+                    <p class="card-text"><small class="text-muted">{{video.publishedAt}}</small></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Modal to show larger view of selected video -->
+<div class="modal fade modal-fullscreen  footer-to-bottom" id="myModal" tabindex="-1" role="dialog" aria-labelledby="emyModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="myModalLabel">{{selectedVideo.title}}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="card-body">
+                <iframe class="" id="player" type="text/html"
+                    [src]="selectedVideo.videoUrl | youtube"
+                    frameborder="0" allowfullscreen>
+                </iframe>
+                <p class="hidden">{{selectedVideo.imageUrl}}</p>
+                <p class="card-text">{{selectedVideo.description}}</p>
+                <p class="card-text"><small class="text-muted">{{selectedVideo.publishedAt}}</small></p>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary" [attr.data-id]="selectedVideo" (click)="SaveVideo()" data-dismiss="modal">Save Video</button>
+        </div>
+      </div>
+    </div>
+  </div>

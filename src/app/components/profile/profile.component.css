@@ -1,0 +1,122 @@
+.row {
+  margin: 0 2rem 8rem 2rem;
+  justify-content: space-around;
+}
+
+h1 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.profile-container {
+  background: #E5E9F2;
+  padding: 2rem;
+}
+
+.profile-image {
+  margin-top: 1rem;
+  width: 198px;
+}
+
+.info p span {
+  font-weight: bold;
+}
+
+.editBtn {
+  cursor: pointer;
+}
+
+.saved-media-container {
+  border: solid 2px #000;
+  padding: 0;
+}
+
+.header {
+  width: 100%;
+  padding: .5rem;
+  background: #0B8BCF;
+  color: #fff;
+}
+
+.album-controls {
+  background: #E5E9F2;
+  margin: 0;
+  padding-top: .5rem;
+}
+
+.add-album {
+  text-align: left;
+}
+
+.remove-album {
+  text-align: right;
+}
+
+.plus-icon,
+.trash-icon {
+  width: 2rem;
+  display: inline-block;
+}
+
+.add-album p,
+.remove-album p {
+  display: inline-block;
+}
+
+.saved-media {
+  padding: 2rem;
+}
+
+.album-icon {
+  width: 60px;
+}
+
+.album {
+  float: left;
+  margin: 0 1rem 1rem 1rem;
+}
+
+@media only screen and (max-width: 470px) {
+  .row {
+    margin: 0;
+  }
+
+  .profile-container {
+    border-bottom: 1px solid #000;
+    margin-bottom: 1rem;
+  }
+
+  .saved-media-container {
+    border: none;
+    margin-bottom: 1rem;
+  }
+
+  .plus-icon {
+    margin-left: -65px;
+  }
+
+  .trash-icon {
+    margin-right: -65px;
+  }
+
+  .album-controls {
+    padding-bottom: .5rem;
+  }
+
+  .album {
+    float: none;
+    display: inline-block;
+    margin: .5rem;
+  }
+
+  .add-album p,
+  .remove-album p {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .profile-container {
+    margin-right: -5rem;
+  }
+}

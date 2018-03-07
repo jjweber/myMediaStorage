@@ -1,0 +1,38 @@
+
+    <h1>Profile</h1>
+
+    <div class="row">
+        <div class="col-lg-4 profile-container">
+            <img class="profile-image" src="../../../assets/images/profile-placeholder2.png" alt="Profile picture">
+            <div class="info">
+                <p><span>Name:</span>John Doe</p>
+                <p><span>Age:</span>38</p>
+                <p><span>Bio:</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit consequatur, quis quae nulla possimus vero, animi tempore nobis debitis sapiente dolor! Nam cumque fugiat numquam sequi, unde dolore quaerat quibusdam?</p>
+                <button [routerLink]="['/edit-profile']" class="btn btn-primary editBtn">Edit</button>
+            </div>
+        </div>
+        <div class="col-lg-7 saved-media-container">
+            <div class="header">
+                <h3>My Saved Media</h3>
+            </div>
+            <div class="row album-controls">
+                <div class="col-xs-6 add-album">
+                    <img class="plus-icon" src="../../../assets/images/plus-icon.ico" alt="Add icon">
+                    <p>Create New Album</p>
+                </div>
+                <div class="col-xs-6 remove-album">
+                    <img class="trash-icon" src="../../../assets/images/trash-icon.png" alt="Trash icon">
+                    <p>Delete Album</p>
+                </div>
+            </div>
+
+            <div class="container saved-media">
+                <div class="album">
+                    <a [routerLink]="['/album']">
+                      <img class="album-icon" src="../../../assets/images/folder-icon.png" alt="Albun icon">
+                    <p>Miscellaneous</p>
+                  </a>
+                </div>
+            </div>
+        </div>
+    </div>

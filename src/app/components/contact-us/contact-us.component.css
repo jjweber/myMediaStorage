@@ -1,0 +1,48 @@
+.page-container {
+  background: #E5E9F2;
+  margin: 3.6rem 3.6rem 8rem 3.6rem;
+  padding: 3.6rem;
+}
+
+.contact-info {
+  text-align: left;
+  margin-bottom: 2rem;
+  word-wrap: break-word;
+}
+
+.contact-info span {
+  font-weight: bold;
+}
+
+.phone-span {
+  margin-right: 5px;
+}
+
+.email-span {
+  margin-right: 30px;
+}
+
+h5 {
+  margin: 2rem auto;
+}
+
+.contact-by-phone {
+  text-align: left;
+  margin-left: 1.2rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .page-container {
+    margin-left: 1.3rem;
+    margin-right: 1.3rem;
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .page-container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
