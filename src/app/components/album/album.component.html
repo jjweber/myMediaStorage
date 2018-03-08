@@ -46,7 +46,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-danger" [attr.data-id]="selectedContent" (click)="removeContent()" data-dismiss="modal">Delete Content</button>
+          <button type="submit" class="btn btn-danger" [attr.data-id]="selectedContent" (click)="removeContent(selectedContent)" data-dismiss="modal">Delete Content</button>
         </div>
       </div>
     </div>
